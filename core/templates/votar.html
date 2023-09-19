@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!--Formulario votos-->
+<div class="container">
+    <h1>Votos</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombe completo</th>
+                <th>Votas</th>
+                <th>Votar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for candidato in candidatos %}
+            <tr>
+                <td>{{ candidato.nombre }} {{ candidato.apellido }}</td>
+                <td>{{ candidato.votos }}</td>
+                <td>
+                    <form action="#">
+                        <button class="btn btn-primary">+ Voto</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>Maria las Petunias</td>
+                <td>
+                    <form action="#">
+                        <button class="btn btn-primary">+ Voto</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
